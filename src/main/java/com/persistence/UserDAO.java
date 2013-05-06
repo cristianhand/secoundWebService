@@ -29,7 +29,7 @@ public class UserDAO {
 
     private void manejaExcepcion(HibernateException he) throws HibernateException {
         tx.rollback();
-        throw new HibernateException("Ocurrió un error en la capa de acceso a datos", he);
+        throw new HibernateException("Ocurrió un error en la capa de acceso a datos, class ---> UserDao.java", he);
     }
 
     public long saveUser(User user) {

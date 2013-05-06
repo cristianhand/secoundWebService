@@ -83,7 +83,7 @@ public class TicketWebService {
     @WebMethod(operationName = "getTicketList")
     public ArrayList getTicketList() {
         //TODO write your implementation code here:
-        ArrayList<Ticket> ticketList = null;
+        ArrayList<Ticket> ticketList = new ArrayList<Ticket>();
         TicketDAO tDao = new TicketDAO();
         ticketList = (ArrayList<Ticket>) tDao.getTicketList();
         return ticketList;

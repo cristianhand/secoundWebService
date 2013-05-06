@@ -78,9 +78,9 @@ public class UserWebService {
     @WebMethod(operationName = "searchUserbyUserName")
     public User searchUserbyUserName(@WebParam(name = "userName") String userName, @WebParam(name = "columName") String columName) {
         //TODO write your implementation code here:
-        User user = null;
-        UserDAO uDao = null;
-        user = uDao.searchUserbyUserName(columName, userName);
+        User user = new User();
+        UserDAO uDao = new UserDAO();
+        user = uDao.searchUserbyUserName(userName, columName);
         return user;
     }
 
